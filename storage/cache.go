@@ -9,3 +9,8 @@ type Cache interface {
 	Set(key string, value string) error
 	Delete(key string) error
 }
+
+type CacheWithMetrics interface {
+	Cache
+	Metrics
+}
